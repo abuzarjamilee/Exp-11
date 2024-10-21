@@ -23,8 +23,8 @@ Global variables are declared outside of function , usually at the top of a prog
 
 Local variables:
 Local variables are declared within a specific block of code, such as a function or loop. They are only accessible within that block and are released from memory when the block exits. Local variables can have the same name as those in other blocks without causing conflicts, as their scope is confined to their respective block. They are typically used for temporary storage or context-specific data.
-
-``#include<iostream>
+``
+#include<iostream>
 using namespace std;
 
 class Cube {
@@ -32,7 +32,8 @@ class Cube {
     float l=3.0;
     float w=5.0;
     float h=7.0;
-};``
+};
+``
 
 int main() {
     Cube c1;
