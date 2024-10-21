@@ -23,7 +23,8 @@ Global variables are declared outside of function , usually at the top of a prog
 
 Local variables:
 Local variables are declared within a specific block of code, such as a function or loop. They are only accessible within that block and are released from memory when the block exits. Local variables can have the same name as those in other blocks without causing conflicts, as their scope is confined to their respective block. They are typically used for temporary storage or context-specific data.
-``
+
+```
 #include<iostream>
 using namespace std;
 
@@ -33,10 +34,142 @@ class Cube {
     float w=5.0;
     float h=7.0;
 };
-``
+```
+output 
+![image](https://github.com/user-attachments/assets/380926e5-8da8-45b4-aa85-a877096d6aef)
+
+```
+#include<iostream>
+using namespace std;
+class cube
+{
+    public:
+    double height=3.0;
+    double width=4.0;
+    double length=5.0;
+
+    double volume()
+    {
+        double v;
+        v=height*width*length;
+        return v;
+    }
+};
+
+int main()
+{
+    cube cube1;
+    double v = cube1.volume();
+    cout<<"volume:"<<v<<endl;
+}
+
+
 
 int main() {
     Cube c1;
     float vol=c1.l*c1.w*c1.h;
     cout<<"Volume of cube = "<<vol;
-}``
+}
+```
+output
+![image](https://github.com/user-attachments/assets/d5559a5f-c5ae-46d8-b9ba-37c26704c8fa)
+
+```#include<iostream>
+using namespace std;
+class cube
+{
+    private:
+    double height=4.0;
+    double width=5.0;
+    double length=6.0;
+
+    public:
+    double volume()
+    {
+        double v;
+        v=height*width*length;
+        return v;
+    }
+};
+
+int main()
+{
+    cube cube1;
+    double v = cube1.volume();
+    cout<<"volume:"<<v<<endl;
+}
+```
+output
+![image](https://github.com/user-attachments/assets/aa0989f9-3a45-4173-be9c-b31da420d7b8)
+```
+#include<iostream>
+using namespace std;
+class cube
+{
+    public:
+    double height=5.0;
+    double width=6.0;
+    double length=7.0;
+
+    double volume()
+    {
+        double v;
+        v=height*width*length;
+        return v;
+    }
+    void disp_vol(double vol)
+    {
+        cout<<"volume :"<<vol<<endl;
+    }
+};
+int main()
+{
+    cube cube1;
+    double v = cube1.volume();
+    cout<<"volume:"<<v<<endl;
+    cube1.disp_vol(v);
+}
+```
+output
+![image](https://github.com/user-attachments/assets/8d2f3a74-5baf-4c47-9d75-0dd7fcbeed27)
+```
+#include<iostream>
+using namespace std;
+class volume{
+    public:
+    float height;
+    float width;
+    float length;
+    void input()
+    {
+        cout<<"enter the value of length: ";
+        cin>>length;
+        cout<<"enter the value of width: ";
+        cin>>width;
+        cout<<"enter the value of height: ";
+        cin>>height;
+    }
+    float vol()
+    {
+        float v=length*width*height;
+        return v;
+    }
+    void display()
+    {
+        double a=vol();
+        cout<<"the volume is :"<<a;
+    }
+};
+int main()
+{
+    volume volume1;
+    volume1.input();
+    float a=volume1.vol();
+    cout<<a;
+}
+```
+![image](https://github.com/user-attachments/assets/5e2d91ef-f6b9-4e1b-8e1e-e5c81593180d)
+
+Conclusion:
+This program helps us understand how classes and objects work in C++. How classes are created and how objects are instantanized. The difference between local and global variables.
+
